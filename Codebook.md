@@ -1,24 +1,42 @@
 Reproducing the tidy data
+
 1) Download the compress data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
 2) Uncompress into a new blank directory
+
 3) place "run_analysis.R" in the new directory
+
 4) run "run_analysis.R"
+
 5) It will create two new files in the new directory
+
 	"mergedData.txt" which represents a subset of the above data
+
 		-combining the "train" and "test" datasets
+
 		-adding a Subject column
+
 		-adding descriptive column names
+
 		-selecting column names representing means and standard deviations 
+
 		-each row represents one observation for one subject
+
 	"tidyData.txt" is a summary of "mergedData.txt
+
 		-each row provides the mean of the data from "mergedData.txt" per column per subject
 
+
 For each data set, the "Subject" column is an int, with all others being numeric.
+
 The explanation for each column can be found in the original data feature.txt file, and is identical in "mergedData.txt" to the original data except for a parsing (elimination) of columns
 
 For "tidyData.txt" 
+
 "Subject" represents the Subject id
+
 All other columns are means of the data found in "mergedData.txt" for each subject
+
 
 > names(tidyData)
  [1] "Subject"                     "tBodyAcc-mean()-X"           "tBodyAcc-mean()-Y"          
